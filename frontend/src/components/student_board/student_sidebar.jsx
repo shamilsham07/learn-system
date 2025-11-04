@@ -6,28 +6,36 @@ export default function StudentSidebar() {
 
   return (
     <>
-     
       <button
         className="toggle-btn"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
       >
-        <i className="bi bi-list"></i>
+        {isOpen ? (
+          <i class="bi bi-x text-white"></i>
+        ) : (
+          <i className="bi bi-list"></i>
+        )}
       </button>
 
-   
-      {isOpen && <div className="sidebar-overlay" onClick={() => setIsOpen(false)}></div>}
+      {isOpen && (
+        <div className="sidebar-overlay" onClick={() => setIsOpen(false)}></div>
+      )}
 
       {/* Sidebar */}
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="sidebar-header">
           <div className="student-icon">
             <i className="bi bi-book-half"></i>
-            <p>Learn<br />Platform</p>
+            <p>
+              Learn
+              <br />
+              Platform
+            </p>
           </div>
         </div>
 
-        <ul className="sidebar-menu">
+        <ul className="sidebar-menu w-100 gap-2">
           <li className="active">Dashboard</li>
           <li>Upload</li>
           <li>Quiz</li>
@@ -41,5 +49,3 @@ export default function StudentSidebar() {
     </>
   );
 }
-
-
