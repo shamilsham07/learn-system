@@ -1,0 +1,288 @@
+.admin-logo {
+  color: #5c59c2;
+  font-size: 30px;
+}
+.learn {
+  font-weight: 800;
+  color: #5c59c2;
+}
+.li-actives {
+  background-color: #5c59c2;
+  color: white;
+  border-radius: 10px;
+}
+.dropdown-menu {
+  background-color: none;
+  border: none;
+}
+.dropdown-menu-lg-end[data-bs-popper] {
+  right: 0;
+  left: 0px;
+}
+.dropdown-toggle::after {
+  margin-left: 7.255em;
+}
+.dropdown-toggle {
+  border: none;
+}
+
+.admin-search {
+  border: none;
+  outline: none;
+  max-width: auto;
+}
+.label-admin-search {
+  border: 1px solid #ebebeb;
+  padding: 5px;
+  border-radius: 20px;
+  gap: 2px;
+  background-color: white;
+}
+.bellicon-in {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #ebebeb;
+}
+.notification {
+  color: red;
+  right: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.dashboard {
+  background-color: #edecf0;
+  border-radius: 10px;
+}
+.home-icon {
+  background-color: #3f3bb0;
+  width: 46px;
+  height: 43px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download-pdf {
+  background-color: #3f3bb0;
+  color: white;
+  border: none;
+  outline: none;
+  padding-block: 10px;
+  padding-inline: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 25px;
+}
+.activity-center{
+  border-radius: 6px;
+}
+.home-icon i {
+  color: white;
+  font-size: 20px;
+}
+.dashborad-heading h5 {
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+.dashborad-heading p {
+  color: gray;
+  /* margin: 0; */
+  font-weight: 100;
+  font-size: 12px;
+}
+.drop-down-arrow {
+  position: absolute;
+  right: 0;
+}
+li {
+  list-style: none;
+}
+.dropinganimation {
+  max-height: none;
+
+  transition: all 0.4s ease;
+}
+.calender-box {
+  border: 1px solid #ebebeb;
+  padding-block: 10px;
+  padding-inline: 10px;
+  background: white;
+  border-radius: 25px;
+  color: gray;
+}
+.dashboard-card2 {
+  background-color: #e4f5ff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.dashboard-card3 {
+  background-color: #ffefe7;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.dashboard-card4 {
+  background-color: #ebfdef;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.dashboard-card1 {
+  background-color: #f1e7ff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+.dashboard-card3 i {
+  color: #ff9b60;
+  font-size: 35px;
+}
+.chart-div {
+  border-radius: 10px;
+  padding: 3px;
+}
+.notification {
+  background-color: white;
+  padding: 6px;
+  color: black;
+}
+.View-all {
+  background-color: #e6edff;
+  color: black;
+  border: none;
+  outline: none;
+  padding-block: 3px;
+  padding-inline: 5px;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+.notification-background {
+  background-color: #f4f7ff;
+  border-radius: 8px;
+
+}
+.table th{
+background-color: #5c59c2;
+color: white;
+text-transform: capitalize;
+}
+.actvity-icon{
+  color: #3f3bb0;
+  font-weight: bold;
+}
+.see-all-activity{
+  color: #5c59c2;
+  font-weight: 100;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+.notification-img {
+  width: 50px;
+  height: 50px;
+  background-color: #63d47f;
+}
+.notification-img img {
+  object-fit: contain;
+  border-radius: 50%;
+}
+.notification-head {
+  padding-left: 10px;
+}
+.notification-head h6 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.notification-head p {
+  padding-top: 1px;
+  color: #d1d5e0;
+  font-size: 10px;
+  font-weight: 500;
+}
+.notification-head span {
+  color: #a8b0ca;
+}
+.notification-icons {
+  background-color: #6768d0;
+  color: white;
+  width: 35px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification-icons i {
+  font-weight: 900;
+}
+.dashboard-card1 i {
+  color: #ac7aef;
+  font-size: 35px;
+}
+.dashboard-card2 i {
+  color: #77c6ff;
+  font-size: 35px;
+}
+.dashboard-card4 i {
+  color: #63d47f;
+  font-size: 35px;
+}
+.dashboard-card1 p,
+.dashboard-card2 p,
+.dashboard-card3 p,
+.dashboard-card4 p {
+  color: gray;
+  font-weight: 100;
+  font-size: 14px;
+}
+.dashboard-card1 h5,
+.dashboard-card2 h5,
+.dashboard-card3 h5,
+.dashboard-card4 h5 {
+  color: black;
+  font-weight: 900;
+}
+
+.card {
+  background-color: none;
+  border: none;
+}
+.calender-box h6 {
+  margin: 0;
+}
+.dropinganimation .open {
+  max-height: auto;
+  opacity: 1 !important;
+}
+.calender-dropdown {
+  z-index: 1000;
+  right: 28px;
+  top: 50px;
+}
+@media (min-width: 992px) {
+  .offcanvas-lg {
+    position: fixed !important;
+    visibility: visible !important;
+    transform: none !important;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+    z-index: 1040;
+  }
+}
