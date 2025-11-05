@@ -16,6 +16,7 @@ import UserLogin from './components/userLogin';
 import Signupform from './components/signupform';
 import StudentSidebar from './components/student_board/student_sidebar';
 import Studentdashboard from './components/student_board/student_dashboard';
+import Upload from './components/student_board/upload';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
      <Route path='/signup' element={<Signupform/>}/>
      <Route path='/studentsidebar' element={<StudentSidebar/>}/>
      <Route path='/Studentdashboard' element={<Studentdashboard/>}/>
+     <Route path='/Upload' element={<Upload/>}/>
+
 
 
 

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./student-bar.css";
+import { useNavigate } from "react-router-dom";
 
-export default function StudentSidebar() {
+export default function StudentSidebar({ active }) {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,8 +38,18 @@ export default function StudentSidebar() {
         </div>
 
         <ul className="sidebar-menu w-100 gap-2">
-          <li className="active">Dashboard</li>
-          <li>Upload</li>
+          <li
+            className={`${(active == "dashboard" ? "active" : "")} `}
+            onClick={()=>navigate("/Studentdashboard")}
+          >
+            Dashboard
+          </li>
+          <li
+            className={`${(active == "upload" ? "active" : "")}`}
+            onClick={()=>navigate("/Upload")}
+          >
+            Upload
+          </li>
           <li>Quiz</li>
           <li>Teachers</li>
         </ul>

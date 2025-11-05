@@ -240,19 +240,18 @@ i {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
-.our-top-porf h6{
+.our-top-porf h6 {
   font-weight: 600;
   /* font-size: 15px; */
   text-transform: capitalize;
 }
-.our-top-porf span{
+.our-top-porf span {
   color: #0052da;
 }
-.our-top-porf p{
+.our-top-porf p {
   font-weight: 300;
-    font-size: 12px;
+  font-size: 12px;
   /* font-weight: 300; */
-
 }
 .padding-top {
   padding-block: 30px;
@@ -264,7 +263,94 @@ i {
   padding-inline: 10px;
   padding-block: 10px;
 }
-
+.upload-file-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.file-upload-div {
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  width: 540px;
+  max-height: 600px;
+  border-radius: 10px;
+}
+.upload-heading h5 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.upload-heading p {
+  font-size: 12px;
+  font-weight: 300;
+  color: gray;
+}
+.border-of-file {
+  border: 2px dashed #1f319d;
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.border-of-file img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+.border-of-file p {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-top: 3px;
+}
+.border-of-file span {
+  color: #1f319d;
+  font-weight: 700;
+}
+.border-of-file h6 {
+  font-size: 10px;
+  color: gray;
+}
+.supported-pdf {
+  color: gray;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.dashed-line-sub {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.dashed-line-sub img {
+  width: 30px;
+  height: 30px;
+}
+.file-label h6 {
+  font-weight: 700;
+  font-size: 14px;
+}
+.file-label p {
+  font-weight: 100;
+  font-size: 10px;
+}
+.delete-file-png {
+  width: 20px !important;
+  height: 20px !important;
+}
+.over-hidden {
+  height: 355px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.over-hidden::-webkit-scrollbar {
+  display: none; 
+}
 @media (max-width: 768px) {
   .dashboard-content {
     margin-left: 0;

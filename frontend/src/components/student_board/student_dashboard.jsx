@@ -49,7 +49,7 @@ export default function StudentDashboard() {
 
   return (
     <div className="dashboard-layout">
-      <StudentSidebar />
+      <StudentSidebar active={"dashboard"} />
       <main className="dashboard-content w-100">
         <div className="row">
           <div className="col-6">
@@ -156,7 +156,9 @@ export default function StudentDashboard() {
                 >
                   <div className="row">
                     <div className="col-6 our-top-porf ">
-                      <h6 className="m-0">our top <span> performarce</span></h6>
+                      <h6 className="m-0">
+                        our top <span> performarce</span>
+                      </h6>
                       <p className="m-o">based on attendence and mark</p>
                     </div>
                     <div className="col-6 d-flex justify-content-end ">
@@ -167,70 +169,67 @@ export default function StudentDashboard() {
                   </div>
                   <hr />
                   <table class="table">
-                  <thead class="thead-dark">
-                    <tr>
-                      <th scope="col">id</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Mark</th>
-                      <th scope="col">performance</th>
-                      <th scope="col">Rank</th>
-                     
-
-
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>4</td>
-                    </tr>
+                    <thead class="thead-dark">
                       <tr>
-                      <td>2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                      <td>3</td>
-                    </tr>
-                       <tr>
-                      <td>3</td>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>4</td>
-                    </tr>
-                       <tr>
-                      <td>3</td>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>4</td>
-                    </tr>
-                       <tr>
-                      <td>3</td>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                      <td>4</td>
-                    </tr>
-                  </tbody>
-                </table>
+                        <th scope="col">id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Mark</th>
+                        <th scope="col">performance</th>
+                        <th scope="col">Rank</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>3</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>4</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
               <div
