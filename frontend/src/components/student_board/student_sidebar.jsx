@@ -52,6 +52,10 @@ export default function StudentSidebar({ active }) {
           </li>
           <li>Quiz</li>
           <li>Teachers</li>
+             <li
+            className={`${(active == "chat" ? "active" : "")}`}
+            onClick={()=>navigate("/chat")}
+          > Chat</li>
         </ul>
 
         <div className="sidebar-footer">

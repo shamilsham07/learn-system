@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StudentSidebar from "./student_sidebar";
 import "./student-bar.css";
 import { Bar } from "react-chartjs-2";
@@ -46,6 +46,10 @@ export default function StudentDashboard() {
       },
     ],
   };
+
+  useEffect(()=>{
+ console.log(localStorage.getItem("email"))
+  },[])
 
   return (
     <div className="dashboard-layout">

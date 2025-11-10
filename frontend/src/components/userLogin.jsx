@@ -5,14 +5,14 @@ import { ToastContainer, toast, Bounce, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function UserLogin() {
-  const navigate=useNavigate("")
+  const navigate = useNavigate("");
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
 
-function somethingerror(){
+  function somethingerror() {
     toast.error(" something went wrong", {
       position: "top-right",
-      containerId:"A",
+      containerId: "A",
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: false,
@@ -22,8 +22,8 @@ function somethingerror(){
       theme: "colored",
       transition: Bounce,
     });
-    setpassword("")
-}
+    setpassword("");
+  }
 
   const makenull = () => {
     setusername("");
@@ -31,27 +31,31 @@ function somethingerror(){
   };
 
   function Login(e) {
+      console.log(username,password)
     e.preventDefault();
     console.log("jayyy");
     const formdata = new FormData();
     formdata.append("username", username);
     formdata.append("password", password);
 
+  
+
     axios
-      .post("http://localhost:8000/Login", formdata, {
+      .post("http://localhost:8000/Login", {"username":username,"password":password}, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
         },
       })
       .then((res) => {
         const result = res.data;
-        console.log(result)
-        if (result.userlogs) {
-          makenull()
-          navigate("/")
-        }
-        else{
-         return somethingerror()
+        console.log(result.token);
+        if (result.token) {
+          makenull();
+          localStorage.setItem("email",username);
+
+          navigate("/");
+        } else {
+          return somethingerror();
         }
       })
       .catch((error) => {
@@ -60,7 +64,7 @@ function somethingerror(){
   }
   return (
     <section className="user-log d-flex justify-content-center align-items-center">
-      <ToastContainer containerId={"A"}/>
+      <ToastContainer containerId={"A"} />
       <div className="padding-blocks">
         <div className="container">
           <div className="row m-0 justify-content-center ">

@@ -2,9 +2,12 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from .models import Signup
+from .models import fileStore
+from rest_framework.authtoken.models import Token
 from django.contrib.auth.hashers import make_password,check_password
 from django.core.mail import send_mail
 from django.conf import settings
+import secrets
 
 
 # Create your views here.
@@ -14,6 +17,7 @@ from django.conf import settings
 @api_view(["POST"])
 def signup(request):
     try:
+        
         data=request.data
         print(data)
         
@@ -49,27 +53,29 @@ def signup(request):
     
 @api_view(["POST"])
 def Login(request):
-    try:     
-        data=request.data
-        # neeed to change this function
-        initiallcall()
-        username=data.get("username")
+    try:   
+        print("hellllllllllllllllllllll")  
+        data=request.data    
+        print(data)    
+        username=data.get("username")    
         password=data.get("password")
-     
+        print(username,password)     
         checkuser=Signup.objects.get(email=username)    
         if checkuser:
-            if check_password(password,checkuser.password):            
-               return JsonResponse({"userlogs":"everything seems good"})
+            if check_password(password,checkuser.password):  
+               token = secrets.token_hex(20)
+               print(token)             
+               return JsonResponse({"userlogs":"everything seems good","token":token})
             else:
                 print(e)
                 return JsonResponse({"password wrong":"something went wrong"})
             
         return JsonResponse({"result":"everything seems good"})
     except Exception as e:
-        print(e)
+        print("error",e)
         return JsonResponse({"error":"something went wrong"})
     
-
+       
 
 
 def initiallcall():
@@ -87,5 +93,25 @@ def initiallcall():
        print("error",e)   
    
    
-
- 
+@api_view(["POST"])
+def filecreation(request):
+    email=request.data.get("email")
+    print(email)
+    if email:
+        user=Signup.objects.get(email=email)
+        print(user)
+    file=request.FILES.getlist("files")    
+    print(file)
+    pdf="pdf"
+    i=0
+    for f in file :
+        i+=1     
+        
+        fileStore.objects.create(Filename=pdf+str(i),filepath=f,studentid=user)
+        
+        
+    print("hi")  
+  
+    print("heellll")
+    return JsonResponse({"everything":"evrything seems good"})
+    

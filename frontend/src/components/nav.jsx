@@ -59,7 +59,7 @@ export default function Nav({ active }) {
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link active">help</a>
+                <a class="nav-link active" href="/help">help</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active">Register</a>

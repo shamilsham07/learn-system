@@ -344,12 +344,22 @@ i {
   height: 20px !important;
 }
 .over-hidden {
-  height: 355px;
+  height: 250px;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
 .over-hidden::-webkit-scrollbar {
-  display: none; 
+  display: none;
+}
+.file-upload-btn button {
+  padding-inline: 10px;
+  padding-block: 5px;
+  background: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid gray;
+  position: relative;
 }
 @media (max-width: 768px) {
   .dashboard-content {
