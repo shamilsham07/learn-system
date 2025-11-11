@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from .models import Signup
 from .models import fileStore
+from .models import Chat
 from rest_framework.authtoken.models import Token
 from django.contrib.auth.hashers import make_password,check_password
 from django.core.mail import send_mail
@@ -115,3 +116,31 @@ def filecreation(request):
     print("heellll")
     return JsonResponse({"everything":"evrything seems good"})
     
+    
+@api_view(["POST"])
+def Chating(request):
+ try:
+    print("///////////////////////////////////////////////////")
+    data=request.data.get("chat")     
+    email=request.data.get("email")
+    student=Signup.objects.get(email=email)
+    Chat.objects.create(
+        studentid=student,
+        text=data,
+        replay="i didnt know"        
+    )
+    response=Chat.objects.filter(
+        studentid=student
+    )
+    arrayofresponse=[]
+    for res in response:
+       arrayofresponse.append({
+           "date":res.date,
+           "text":res.text,
+           "replay":res.replay
+       })
+    
+    return JsonResponse({"good":arrayofresponse})
+ except Exception as e:
+    print (e)
+    return JsonResponse({"error":"error"})    

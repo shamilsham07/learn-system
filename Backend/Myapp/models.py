@@ -24,5 +24,13 @@ class fileStore(models.Model):
     studentid=models.ForeignKey(Signup,on_delete=models.CASCADE)
     filepath=models.FileField(upload_to="uploads/")
     
+class Chat(models.Model):
+    text=models.TextField(blank=True)
+    date=models.DateField(default=timezone.now)
+    replay=models.TextField(blank=True)
+    studentid=models.ForeignKey(Signup,on_delete=models.CASCADE)      
+    
+    
+    
         
             

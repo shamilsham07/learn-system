@@ -7,8 +7,7 @@ urlpatterns = [
     path("signup/",views.signup),
     path("Login",views.Login),
     path("filecreation",views.filecreation),
-    
-    
+    path("startchat",views.Chating),    
 
 ]
      
